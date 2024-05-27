@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.shape {
+    height: 100px;
+    width: 100px;
+    background: rgba(255,0,0,1);
+    border-radius: 50%;
+    transition: background 1s ease, border-radius 1s ease;
+}
+
+.card-wrapper{
+    display: flex;
+    gap: 1rem;
+    border: 1px solid red;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.card{
+    background-color: peru;
+    width: 100%;
+    padding: 1rem;
+    
+}
+
+/*break point para tablets*/
+
+@media only screen and (min-width:768px) {
+    .shape{
+        background: rgba(0,0,0,1);
+        border-radius: 0;
+    }
+
+    .card{
+        width: calc(50% - 1rem)
+    }
+}
+
+/*break point para desktop*/
+    @media only screen and (min-width:1024px) {
+        .shape{
+            width: 200px;
+            background: rgba(0,255,0,1);
+        }
+
+        .card{
+            width: calc(33.33% - 1rem);
+        }
+    }
