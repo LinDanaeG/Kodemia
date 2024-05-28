@@ -1,0 +1,265 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container{
+    background-color: hsl(226, 43%, 10%);
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.user-card{
+    background-color: hsl(235, 46%, 20%);
+    width: 327px;
+    height: 203px;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.card-heading{
+    background-color: hsl(246, 80%, 60%);
+    border-radius: .5rem;
+    padding: 35px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    color: white;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    height: 133px;
+    
+
+}
+
+.card-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-info p{
+    font-size: 1rem;
+    color: #BBC0FF;
+    font-family: "Rubik Regular";
+
+}
+
+
+.card-info h3{
+    font-family: "Rubik Light";
+    font-size: 1.5rem;
+}
+
+img{
+    border: 3px solid white;
+    border-radius: 100%;
+    width: 64px;
+    height: 64px;
+}
+
+.frequency-wrapper{
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+
+.frequency-option{
+    margin-bottom: 1rem;
+    color: hsl(235, 45%, 61%);
+    transition: all 1s ease;
+    margin: 1.5rem;
+    font-family: Rubik Regular;
+}
+
+.frequency-option:hover{
+    cursor: pointer;
+    color: white;
+    background-color: rgba(255,255,255,.1);
+    font-size: 1.25rem;
+}
+
+.frequency-option:active{
+    color: white;
+}
+.timing-cards-container{
+    width: 327px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.timing-card{
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: -10px;
+    width: 100%;
+    height: 160px;
+    position: relative;
+    border-radius: .5rem;
+    color: white;
+}
+
+.timing-card.work{
+    background-image: url(../images/icon-work.svg);
+    background-color: hsl(15, 100%, 70%);
+}
+
+.timing-card.play{
+    background-image: url(../images/icon-play.svg);
+    background-color: hsl(195, 74%, 62%);
+}
+
+.timing-card.study{
+   background-image: url(../images/icon-study.svg);
+   background-color: hsl(348, 100%, 68%);
+}
+
+.timing-card.exercise{
+    background-image: url(../images/icon-exercise.svg);
+    background-color: hsl(145, 58%, 55%);
+}
+
+.timing-card.social{
+    background-image: url(../images/icon-social.svg);
+    background-color: hsl(264, 64%, 52%);
+}
+
+.timing-card.self-care{
+    background-image: url(../images/icon-self-care.svg);
+    background-color: hsl(43, 84%, 65%);
+}
+
+.timing-card-content{
+    position: absolute;
+    padding: 1.5rem 1.75rem;
+    background-color: hsl(235, 46%, 20%);
+    width: 100%;
+    top: 40px;
+    height: 122px;
+    border-radius: .5rem;
+}
+
+.timing-card-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+    font-family: "Rubik Medium";
+    align-items: center;
+    font-size: 18px;
+}
+
+.timing-card-task{
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.timing-card-menu{
+  color: hsl(236, 100%, 87%);
+  align-self: center;
+}
+
+.timing-card-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.timing-card-body span:first-of-type{
+    font-family: "Rubik Light";
+    font-size: 2rem;
+}
+
+.timing-card-body span:last-of-type{
+    color: hsl(236, 100%, 87%);
+    font-family: "Rubik Regular";
+}
+
+@media only screen and (min-width:1440px) {
+    .main-container{
+        flex-direction: row;
+        width: 100vw;
+        height: 100vh;
+        
+    }
+
+    .user-card{
+        width: 255px;
+        height: 518px;
+        
+    }
+
+    img{
+        width: 78px;
+        height: 78px
+    }
+
+    .card-info{
+        width: 139px;
+    }
+
+    .card-info h3{
+        font-size: 40px;
+    }
+
+    .card-heading{
+        height: 354px;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .frequency-wrapper{
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 0 1.5rem 2rem;
+    }
+
+    .frequency-option{
+        margin: 0;
+        
+    }
+    .timing-cards-container{
+        flex-direction: row;
+        width: 825px;
+        height: 518px;
+        margin-left: 30px;
+        gap: 30px;
+    }
+
+    .timing-card{
+        width: 255px;
+        height: 160px;
+    }
+
+    .timing-card-content{
+        height: 199px;
+    }
+
+    .timing-card-header{
+        margin-bottom: 1.5rem;
+    }
+
+    .timing-card-body{
+        flex-direction: column;
+        align-items: start;
+        gap: .5rem;
+    }
+
+    .timing-card-body span:first-of-type {
+        font-size: 3.5rem;
+    }
+}
