@@ -1,0 +1,94 @@
+$shadowColor: #ddd;
+$borderColor: #acacac;
+
+$colors: (
+    "primary": blue,
+    "secondary": lightgray,
+    "success": green,
+    "danger": red,
+    "warning": orange,
+    "info": skyblue,
+    "dark": #333,
+    "light": #ddd
+);
+
+@mixin buttonVariant($color){
+    background-color: $color;
+    border-color: $color;
+}
+
+@mixin defaultBox {
+    border-radius: .5rem;
+    box-shadow: 3px 3px 5px $shadowColor;
+    border: 1px solid $borderColor;
+    padding: 1rem;
+    background-color: slateblue;
+    margin: 1rem;
+}
+
+@each $name, $color in $colors {
+    .button--#{$name}{
+        @include buttonVariant($color);
+    }
+    .text--#{$name}{
+        color:$color
+    }
+    .border--#{name}{
+        border-color: $color;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+.card{
+    border: 1px solid #acacac;
+    border-radius: .5rem;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 3px 3px 5px $shadowColor;
+    &__title{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    &__list{
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        &-item{
+            padding: .5rem 1rem;
+            &:not(:last-child){
+            border-bottom: 1px solid #acacac;
+            }
+        }
+    }
+    &__button-wrapper{
+        display: flex;
+        gap: 1rem;
+        &--column{
+            flex-direction: column;
+        }
+    }
+}
+
+.button{
+    height: 40px;
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: .5rem;
+
+    &:hover{
+        border: 1px solid #acacac;
+        cursor: pointer;
+        box-shadow: 3px 3px 5px $shadowColor;
+    }
+}
+
+.post-form{
+    @include defaultBox()
+}
+

@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card--supervisor {
+  border-top: 3px solid #44D3D2;
+  border-radius: 0.5rem;
+}
+
+.card--teamBuilder {
+  border-top: 3px solid #EA5454;
+  border-radius: 0.5rem;
+}
+
+.card--karma {
+  border-top: 3px solid #FCAE4A;
+  border-radius: 0.5rem;
+}
+
+.card--calculator {
+  border-top: 3px solid hsl(212, 86%, 64%);
+  border-radius: 0.5rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 76px;
+  align-items: center;
+  margin: 85px 0;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  width: 311px;
+  text-align: center;
+  color: #4D4F62;
+}
+.intro__title {
+  font-family: "Poppins Extra Light";
+  font-size: 1.5rem;
+}
+.intro__title span {
+  font-family: "Poppins Semi Bold";
+}
+.intro__description {
+  font-family: "Poppins Regular";
+  font-size: 1rem;
+}
+
+.card {
+  box-shadow: 0 2px 7px #979796;
+  position: relative;
+  padding: 28px;
+  height: 222px;
+  width: 100%;
+}
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 311px;
+}
+.card img {
+  width: 57px;
+  height: 57px;
+  position: absolute;
+  bottom: 28px;
+  right: 28px;
+}
+.card h3 {
+  font-family: "Poppins Semi Bold";
+  color: #4D4F62;
+  font-size: 20px;
+}
+.card p {
+  font-family: "Poppins Regular";
+  color: #4D4F62;
+  font-size: 13px;
+  line-height: 23px;
+}/*# sourceMappingURL=styles.css.map */

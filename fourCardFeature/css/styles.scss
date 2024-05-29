@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$colors:(
+    "supervisor": #44D3D2,
+    "teamBuilder": #EA5454,
+    "karma": #FCAE4A,
+    "calculator": hsl(212, 86%, 64%)
+);
+
+@mixin defaultCard {
+    box-shadow: 0 2px 7px #979796;
+    position: relative;
+    padding: 28px;
+    height: 222px;
+    width: 100%;
+}
+
+@mixin defaultDisplay {
+    display: flex;
+    flex-direction: column;
+}
+
+@each $name, $color in $colors {
+    .card--#{$name}{
+        border-top: 3px solid $color;
+        border-radius: .5rem;
+    }
+}
+
+main{
+    @include defaultDisplay();
+    gap: 76px;
+    align-items: center;
+    margin: 85px 0;
+
+}
+
+.intro{
+    @include defaultDisplay();
+    width: 311px;
+    text-align: center;
+    color: #4D4F62;
+    &__title{
+        font-family: "Poppins Extra Light";
+        font-size: 1.5rem;
+        & span{
+            font-family: "Poppins Semi Bold";
+        }
+    }
+    &__description{
+        font-family: "Poppins Regular";
+        font-size: 1rem;
+    }
+}
+
+.card{
+    @include defaultCard();
+    &-wrapper{
+        @include defaultDisplay();
+    gap: 25px;
+    width: 311px;
+    }
+    & img{
+        width: 57px;
+        height: 57px;
+        position: absolute;
+        bottom: 28px;
+        right: 28px;
+    }
+    & h3{
+        font-family: "Poppins Semi Bold";
+        color: #4D4F62;
+        font-size: 20px;
+    }
+    & p{
+        font-family: 'Poppins Regular';
+        color: #4D4F62;
+        font-size: 13px;
+        line-height: 23px;
+    }
+}
